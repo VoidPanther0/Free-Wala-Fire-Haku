@@ -30,10 +30,10 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
 
-      - name: Build solution (ISO C++20)
+      - name: Build solution (ISO C++17)
         shell: pwsh
         run: |
-          msbuild "${{ env.SOLUTION }}" /p:Configuration=${{ env.CONFIGURATION }} /p:Platform=${{ env.PLATFORM }} /p:LanguageStandard=stdcpp20 /m /v:minimal
+          msbuild "${{ env.SOLUTION }}" /p:Configuration=${{ env.CONFIGURATION }} /p:Platform=${{ env.PLATFORM }} /p:LanguageStandard=stdcpp17 /m /v:minimal
 
       - name: Verify output
         shell: pwsh
