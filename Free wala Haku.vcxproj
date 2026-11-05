@@ -52,7 +52,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;IMGUI_DEFINE_MATH_OPERATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>$(ProjectDir)framework;$(ProjectDir)framework\app;$(ProjectDir)framework\core;$(ProjectDir)framework\theme;$(ProjectDir)framework\helpers;$(ProjectDir)framework\pages;$(ProjectDir)framework\data;$(ProjectDir)framework\esp;$(ProjectDir)framework\esp\FrameWork\Math;$(ProjectDir)framework\esp\FrameWork\Math\Vectors;$(ProjectDir)framework\esp\FrameWork\Utilities\Memory;$(ProjectDir)thirdparty\minhook\include;$(ProjectDir)thirdparty\imgui;$(ProjectDir)thirdparty\imgui\backends;$(ProjectDir)thirdparty\freetype\include;$(ProjectDir)thirdparty\freetype-source\include;$(ProjectDir)thirdparty\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
@@ -71,7 +71,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;IMGUI_DEFINE_MATH_OPERATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>$(ProjectDir)framework;$(ProjectDir)framework\app;$(ProjectDir)framework\core;$(ProjectDir)framework\theme;$(ProjectDir)framework\helpers;$(ProjectDir)framework\pages;$(ProjectDir)framework\data;$(ProjectDir)framework\esp;$(ProjectDir)framework\esp\FrameWork\Math;$(ProjectDir)framework\esp\FrameWork\Math\Vectors;$(ProjectDir)framework\esp\FrameWork\Utilities\Memory;$(ProjectDir)thirdparty\minhook\include;$(ProjectDir)thirdparty\imgui;$(ProjectDir)thirdparty\imgui\backends;$(ProjectDir)thirdparty\freetype\include;$(ProjectDir)thirdparty\freetype-source\include;$(ProjectDir)thirdparty\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
