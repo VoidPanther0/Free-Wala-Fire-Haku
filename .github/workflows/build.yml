@@ -28,10 +28,10 @@ jobs:
         uses: nuget/setup-nuget@v2
 
       - name: Restore dependencies (NuGet)
-        run: nuget restore ${{ env.SOLUTION }}
+        run: nuget restore "${{ env.SOLUTION }}"
 
       - name: Build solution (ISO C++20)
-        run: msbuild ${{ env.SOLUTION }} /p:Configuration=${{ env.CONFIGURATION }} /p:Platform=${{ env.PLATFORM }} /p:LanguageStandard=stdcpp20 /m /v:minimal
+        run: msbuild "${{ env.SOLUTION }}" /p:Configuration=${{ env.CONFIGURATION }} /p:Platform=${{ env.PLATFORM }} /p:LanguageStandard=stdcpp20 /m /v:minimal
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
