@@ -1,0 +1,68 @@
+name: Build
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ "v*" ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Windows DLL
+    runs-on: windows-latest
+
+    env:
+      SOLUTION: "Free wala Haku.sln"
+      CONFIGURATION: Release
+      PLATFORM: x64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build solution (ISO C++20)
+        shell: pwsh
+        run: |
+          msbuild "${{ env.SOLUTION }}" /p:Configuration=${{ env.CONFIGURATION }} /p:Platform=${{ env.PLATFORM }} /p:LanguageStandard=stdcpp20 /m /v:minimal
+
+      - name: Verify output
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "bin")) { throw "bin/ not produced" }
+          Get-ChildItem bin -Recurse | Select-Object Name, Length | Format-Table -AutoSize
+          if (-not (Get-ChildItem "bin" -Filter "*.dll")) { throw "no dll produced" }
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Free-wala-Haku-${{ env.CONFIGURATION }}-${{ github.run_number }}
+          path: |
+            bin/*.dll
+            bin/*.pdb
+            bin/*.lib
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Auto-publish release
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || format('v{0}', github.run_number) }}
+          name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || format('Build {0}', github.run_number) }}
+          files: |
+            bin/*.dll
+            bin/*.pdb
+          generate_release_notes: true
+          fail_on_unmatched_files: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
