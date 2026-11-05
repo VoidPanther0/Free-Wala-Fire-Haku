@@ -1,0 +1,19 @@
+# Build output
+/bin/
+/vsbuild/
+*.obj
+*.pdb
+*.ilk
+*.tlog
+*.recipe
+*.log
+*.ipdb
+*.iobj
+*.idb
+
+# Vendored dependencies (large)
+/thirdparty/
+
+# Visual Studio
+.vs/
+*.user

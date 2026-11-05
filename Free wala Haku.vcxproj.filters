@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="framework">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\app">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\core">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\helpers">
+      <UniqueIdentifier>{93995381-89BD-4b04-88EB-625FBE52EBFC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\pages">
+      <UniqueIdentifier>{93995382-89BD-4b04-88EB-625FBE52EBFD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\theme">
+      <UniqueIdentifier>{93995383-89BD-4b04-88EB-625FBE52EBFE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\data">
+      <UniqueIdentifier>{93995384-89BD-4b04-88EB-625FBE52EBFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty">
+      <UniqueIdentifier>{93995385-89BD-4b04-88EB-625FBE52EC00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\imgui">
+      <UniqueIdentifier>{93995386-89BD-4b04-88EB-625FBE52EC01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\shader">
+      <UniqueIdentifier>{93995387-89BD-4b04-88EB-625FBE52EC02}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="framework\main.cpp">
+      <Filter>framework</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\app\gui.cpp">
+      <Filter>framework\app</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\core\device.cpp">
+      <Filter>framework\core</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\core\backdrop.cpp">
+      <Filter>framework\core</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\core\glow_renderer.cpp">
+      <Filter>framework\core</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\core\window.cpp">
+      <Filter>framework\core</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\helpers\fonts.cpp">
+      <Filter>framework\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\helpers\icons.cpp">
+      <Filter>framework\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\helpers\stb_impl.cpp">
+      <Filter>framework\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\helpers\screenshot.cpp">
+      <Filter>framework\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\helpers\window_drag.cpp">
+      <Filter>framework\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\pages\main_page.cpp">
+      <Filter>framework\pages</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\pages\login_page.cpp">
+      <Filter>framework\pages</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\data\fontello_data.cpp">
+      <Filter>framework\data</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\data\fonts_data.cpp">
+      <Filter>framework\data</Filter>
+    </ClCompile>
+    <ClCompile Include="framework\data\logo_data.cpp">
+      <Filter>framework\data</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_draw.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_tables.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_widgets.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_freetype.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\backends\imgui_impl_dx11.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework\app\gui.h">
+      <Filter>framework\app</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\core\device.h">
+      <Filter>framework\core</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\core\glow_renderer.h">
+      <Filter>framework\core</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\core\window.h">
+      <Filter>framework\core</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\helpers\fonts.h">
+      <Filter>framework\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\helpers\icons.h">
+      <Filter>framework\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\helpers\screenshot.h">
+      <Filter>framework\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\helpers\window_drag.h">
+      <Filter>framework\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\pages\main_page.h">
+      <Filter>framework\pages</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\pages\login_page.h">
+      <Filter>framework\pages</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\theme\colors.h">
+      <Filter>framework\theme</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\theme\layout.h">
+      <Filter>framework\theme</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\theme\ui_scale.h">
+      <Filter>framework\theme</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\data\fontello_data.h">
+      <Filter>framework\data</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\data\fonts_data.h">
+      <Filter>framework\data</Filter>
+    </ClInclude>
+    <ClInclude Include="framework\data\logo_data.h">
+      <Filter>framework\data</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="thirdparty\shader\glow.vert">
+      <Filter>thirdparty\shader</Filter>
+    </None>
+    <None Include="thirdparty\shader\glow.frag">
+      <Filter>thirdparty\shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>
