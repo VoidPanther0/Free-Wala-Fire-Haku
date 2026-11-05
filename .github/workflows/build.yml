@@ -13,7 +13,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      SOLUTION: Free wala Haku.sln
+      SOLUTION: "Free wala Haku.sln"
       CONFIGURATION: Release
       PLATFORM: x64
 
@@ -36,10 +36,23 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: Imgui-Portifolio-15-${{ env.CONFIGURATION }}
+          name: Free-wala-Haku-${{ env.CONFIGURATION }}
           path: |
             bin/*.dll
             bin/*.pdb
             bin/*.lib
           if-no-files-found: warn
           retention-days: 30
+
+      - name: Auto-publish release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Build ${{ github.run_number }}
+          files: |
+            bin/*.dll
+            bin/*.pdb
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
