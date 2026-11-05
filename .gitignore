@@ -1,6 +1,4 @@
 # Build output
-/bin/
-/vsbuild/
 *.obj
 *.pdb
 *.ilk
@@ -11,8 +9,7 @@
 *.iobj
 *.idb
 
-# Vendored dependencies (large)
-/thirdparty/
+
 
 # Visual Studio
 .vs/
